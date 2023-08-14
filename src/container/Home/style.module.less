@@ -1,0 +1,88 @@
+.home{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: blueviolet;
+    background-color: #007fff;
+    color: #fff;
+    font-size: 14px;
+    z-index: 100;
+    padding: 10px;
+    .dataWrap{
+      font-size: 14px;
+      display: flex;
+      > span{
+        display: flex;
+        margin-right: 20px;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        >p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100px;
+            font-size: 22px;
+            font-family: DINCondensed-Bold, DINCondensed;
+            margin-left: 4px;
+          }
+        }
+    }
+    .typeWrap{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      > div {
+        align-self: flex-start;
+        background: rgba(0, 0, 0, 0.1);
+        border-radius: 30px;
+        padding: 3px 8px;
+        font-size: 12px;
+      }
+      .arrow {
+        font-size: 12px;
+        margin-left: 4px;
+      }
+    }
+  }
+  .contentWrap {
+    height:calc(~"(100% - 50px)");
+    overflow: hidden;
+    overflow-y: scroll;
+    background-color: #f5f5f5;
+    padding: 10px;
+    :global {
+      .za-pull {
+        overflow: unset;
+      }
+    }
+  }
+  .add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
+    border-radius: 50px;
+    background-color: #fff;
+    color: #007fff;
+    z-index: 100;
+    border: 1PX solid #e9e9e9;
+  }
+}
